@@ -394,7 +394,7 @@
   </div>
 
   <!-- Resume / Preview -->
-  <div class="win" id="win-resume" style="top:64px; left:38%; width:520px; height:560px;">
+  <div class="win" id="win-resume" style="top:44px; left:38%; width:640px; height:700px;">
     <div class="win-head draggable" data-win="resume">
       <div class="lights"><button class="light red" data-action="close"></button><button class="light yellow" data-action="min"></button><button class="light green" data-action="max"></button></div>
       <div class="win-title">Anmol_Agarwal_Resume.pdf</div>
@@ -754,8 +754,11 @@
     typeLine();
   }
 
+  ['terminal','browser','resume','mail'].forEach(function(id){ state[id].positioned = true; });
   openApp('terminal');
-  activeAppName.textContent = 'Terminal';
+  openApp('browser');
+  openApp('resume');
+  openApp('mail');
 })();
 </script>
 
