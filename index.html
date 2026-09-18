@@ -114,9 +114,11 @@
     border-radius:8px;
     transition: background-color .12s ease;
   }
-  .desk-icon:hover{ background: rgba(255,255,255,0.28); }
-  :root[data-theme="dark"] .desk-icon:hover{ background: rgba(255,255,255,0.08); }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .desk-icon:hover{ background: rgba(255,255,255,0.08); } }
+  @media (hover: hover){
+    .desk-icon:hover{ background: rgba(255,255,255,0.28); }
+    :root[data-theme="dark"] .desk-icon:hover{ background: rgba(255,255,255,0.08); }
+    @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .desk-icon:hover{ background: rgba(255,255,255,0.08); } }
+  }
   .desk-icon.is-selected{ background: rgba(53,104,222,0.28); }
   .desk-icon-art{ display:block; width:46px; height:58px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.22)); }
   .desk-icon-art svg{ width:100%; height:100%; }
@@ -152,7 +154,7 @@
     position:relative;
     transition: transform .15s cubic-bezier(.34,1.56,.64,1);
   }
-  .dock-item:hover{ transform: translateY(-7px) scale(1.08); }
+  @media (hover: hover){ .dock-item:hover{ transform: translateY(-7px) scale(1.08); } }
   .dock-item:active{ transform: translateY(-2px) scale(.96); }
   .dock-item svg{ width:26px; height:26px; }
   .dock-dot{ position:absolute; bottom:-7px; left:50%; transform:translateX(-50%); width:4px; height:4px; border-radius:50%; background: var(--text-faint); opacity:0; }
@@ -162,7 +164,7 @@
     background: rgba(20,20,24,0.85); color:#fff; font-size:11.5px; padding:4px 8px; border-radius:5px;
     white-space:nowrap; opacity:0; pointer-events:none; transition: opacity .12s ease;
   }
-  .dock-item:hover .dock-label{ opacity:1; }
+  @media (hover: hover){ .dock-item:hover .dock-label{ opacity:1; } }
 
   @media (max-width:720px){
     .dock{ gap:6px; padding:7px 9px; bottom:10px; }
@@ -280,7 +282,7 @@
     background:var(--accent); color:#fff; border:none; border-radius:7px;
     padding:8px 14px; font-size:13px; font-weight:600; cursor:pointer; text-decoration:none;
   }
-  .btn:hover{ filter:brightness(1.06); }
+  @media (hover: hover){ .btn:hover{ filter:brightness(1.06); } }
 
   /* browser */
   .browser-chrome{ display:flex; align-items:center; gap:8px; padding:8px 12px; border-bottom:1px solid var(--win-border); }
